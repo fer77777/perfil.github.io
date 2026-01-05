@@ -1,0 +1,751 @@
+<!DOCTYPE html> <!-- MODIFICACIÓN [Fernando]: Declaración del tipo de documento HTML5 - 07/12/2025 -->
+<html lang="es" class="scroll-smooth"> <!-- MODIFICACIÓN [Fernando]: Establece idioma español y scroll suave - 07/12/2025 -->
+
+<head>
+    <meta charset="UTF-8" /> <!-- MODIFICACIÓN [Fernando]: Codificación UTF-8 para caracteres especiales - 07/12/2025 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- MODIFICACIÓN [Fernando]: Optimización para pantallas móviles - 07/12/2025 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" /> <!-- MODIFICACIÓN [Fernando]: Compatibilidad máxima con versiones antiguas de IE - 07/12/2025 -->
+
+    <title>FERNANDO CARLOS CARRASCO CONDORI - Desarrollador Full-Stack de Aplicaciones Flutter</title> <!-- MODIFICACIÓN [Fernando]: Título principal mostrado en pestañas y buscadores - 07/12/2025 -->
+
+    <!-- MODIFICACIÓN [Fernando]: Metadatos esenciales para SEO - 07/12/2025 -->
+    <meta name="title" content="FERNANDO CARLOS CARRASCO CONDORI - Desarrollador Full-Stack de Aplicaciones Flutter" />
+    <meta name="description"
+        content="FERNANDO CARLOS CARRASCO CONDORI - Estudiante de Ingeniería de Sistemas con especialización en desarrollo web, interfaces funcionales y proyectos innovadores." />
+    <meta name="keywords"
+        content="FERNANDO CARLOS CARRASCO CONDORI, Desarrollador Web, Desarrollo Full-Stack, Flutter, Ingeniería de Sistemas, Diseño Web, Proyectos" />
+    <meta name="author" content="FERNANDO CARLOS CARRASCO CONDORI" />
+    <meta name="robots" content="index, follow" /> <!-- MODIFICACIÓN [Fernando]: Permite indexación por buscadores - 07/12/2025 -->
+    <meta name="language" content="Spanish" /> <!-- MODIFICACIÓN [Fernando]: Indica idioma del contenido - 07/12/2025 -->
+
+    <meta name="google-site-verification" content="PLhfdQAUnBd8AzqrpyM8NGO8kVHUTKioz2VXzMM2OyE" /> <!-- MODIFICACIÓN [Fernando]: Verificación Search Console - 07/12/2025 -->
+
+    <link rel="canonical" href="https://usamasarwar.github.io/UsamaSarwar/" /> <!-- MODIFICACIÓN [Fernando]: URL canónica (debe reemplazarse por tu dominio) - 07/12/2025 -->
+
+    <!-- MODIFICACIÓN [Fernando]: Configuración Open Graph para compartir en redes sociales - 07/12/2025 -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://usamasarwar.github.io/UsamaSarwar/" />
+    <meta property="og:title" content="FERNANDO CARLOS CARRASCO CONDORI - Desarrollador Full-Stack de Aplicaciones Flutter" />
+    <meta property="og:description"
+        content="Estudiante de Ingeniería de Sistemas con especialización en desarrollo web, interfaces funcionales y proyectos innovadores." />
+    <meta property="og:image" content="" /> <!-- MODIFICACIÓN [Fernando]: Imagen para vista previa de enlaces - 07/12/2025 -->
+    <meta property="og:site_name" content="FERNANDO CARLOS CARRASCO CONDORI Portafolio" />
+
+    <!-- MODIFICACIÓN [Fernando]: Metadatos para tarjetas de Twitter - 07/12/2025 -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://usamasarwar.github.io/UsamaSarwar/" />
+    <meta property="twitter:title" content="FERNANDO CARLOS CARRASCO CONDORI - Desarrollador Full-Stack de Aplicaciones Flutter" />
+    <meta property="twitter:description"
+        content="Estudiante de Ingeniería de Sistemas con especialización en desarrollo web, interfaces funcionales y proyectos innovadores." />
+    <meta property="twitter:image" content="c" />
+    <meta property="twitter:creator" content="@UsamaSarwarPro" /> <!-- MODIFICACIÓN [Fernando]: Cambiar cuando tengas tu propio user - 07/12/2025 -->
+
+    <!-- MODIFICACIÓN [Fernando]: Colores para temas y compatibilidad en Windows - 07/12/2025 -->
+    <meta name="theme-color" content="#7c3aed" />
+    <meta name="msapplication-TileColor" content="#7c3aed" />
+
+    <!-- MODIFICACIÓN [Fernando]: Iconos principales del sitio - 07/12/2025 -->
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="apple-touch-icon" href="favicon.png" />
+    <link rel="manifest" href="manifest.json" /> <!-- MODIFICACIÓN [Fernando]: Soporte para PWA - 07/12/2025 -->
+
+    <!-- MODIFICACIÓN [Fernando]: Carga del framework TailwindCSS desde CDN - 07/12/2025 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- MODIFICACIÓN [Fernando]: Biblioteca de iconos FontAwesome - 07/12/2025 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <!-- MODIFICACIÓN [Fernando]: Importación de fuentes externas desde Google Fonts - 07/12/2025 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet" />
+
+    <link rel="stylesheet" href="css/style.css" /> <!-- MODIFICACIÓN [Fernando]: Archivo CSS personalizado para estilos propios - 07/12/2025 -->
+</head>
+    <script>
+        /* MODIFICACIÓN [Fernando]: Configuración personalizada de TailwindCSS - 07/12/2025 */
+        tailwind.config = {
+            darkMode: "class", /* MODIFICACIÓN [Fernando]: Activa el modo oscuro por clase - 07/12/2025 */
+            theme: {
+                extend: {
+                    fontFamily: {
+                        inter: ["Inter", "sans-serif"], /* MODIFICACIÓN [Fernando]: Fuente principal del sitio - 07/12/2025 */
+                        mono: ["JetBrains Mono", "monospace"], /* MODIFICACIÓN [Fernando]: Fuente monoespaciada para código - 07/12/2025 */
+                    },
+                    colors: {
+                        primary: { /* MODIFICACIÓN [Fernando]: Paleta personalizada del color "primary" - 07/12/2025 */
+                            50: "#faf5ff",
+                            100: "#f3e8ff",
+                            200: "#e9d5ff",
+                            300: "#d8b4fe",
+                            400: "#c084fc",
+                            500: "#a855f7",
+                            600: "#9333ea",
+                            700: "#7c3aed",
+                            800: "#6b21a8",
+                            900: "#581c87",
+                        },
+                    },
+                    animation: { /* MODIFICACIÓN [Fernando]: Declaración de animaciones personalizadas - 07/12/2025 */
+                        "fade-in": "fadeIn 0.5s ease-in-out",
+                        "slide-up": "slideUp 0.5s ease-out",
+                        "bounce-slow": "bounce 2s infinite",
+                        "pulse-slow": "pulse 3s infinite",
+                        float: "float 6s ease-in-out infinite",
+                    },
+                    keyframes: { /* MODIFICACIÓN [Fernando]: Keyframes de las animaciones definidas arriba - 07/12/2025 */
+                        fadeIn: {
+                            "0%": { opacity: "0" },
+                            "100%": { opacity: "1" },
+                        },
+                        slideUp: {
+                            "0%": { transform: "translateY(20px)", opacity: "0" },
+                            "100%": { transform: "translateY(0)", opacity: "1" },
+                        },
+                        float: {
+                            "0%, 100%": { transform: "translateY(0px)" },
+                            "50%": { transform: "translateY(-10px)" },
+                        },
+                    },
+                },
+            },
+        };
+    </script>
+
+    <!-- MODIFICACIÓN [Fernando]: Datos estructurados JSON-LD para SEO (Schema.org Person) - 07/12/2025 -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "FERNANDO CARLOS CARRASCO CONDORI",
+            "url": "https://usamasarwar.github.io/UsamaSarwar/",
+            "image": "images/fer.png",
+            "jobTitle": "Desarrollador Full-Stack de Aplicaciones Flutter",
+            "description": "Estudiante de Ingeniería de Sistemas con especialización en desarrollo web, interfaces funcionales y proyectos innovadores.",
+            "email": "contact@usama.dev",
+            "telephone": "+923100007773",
+            "address": {
+                "@type": "PostalAddress",
+                "addressCountry": "Bolivia"
+            },
+            "sameAs": [
+                "https://github.com/UsamaSarwar",
+                "https://linkedin.com/in/UsamaSarwarPro",
+                "https://twitter.com/UsamaSarwarPro",
+                "https://youtube.com/UsamaSarwar",
+                "https://instagram.com/UsamaSarwarPro",
+                "https://facebook.com/UsamaSarwarPro",
+                "https://www.usama.dev"
+            ],
+            "knowsAbout": [
+                "Desarrollo Web",
+                "Diseño de Interfaz",
+                "Desarrollo de Aplicaciones Móviles",
+                "Programación",
+                "AI Integration",
+                "Machine Learning",
+                "Open Source Development"
+            ]
+        }
+    </script>
+</head>
+
+<body class="bg-gray-900 text-white font-inter antialiased dark">
+    <!-- MODIFICACIÓN [Fernando]: Navbar fijo con fondo borroso y modo oscuro - 07/12/2025 -->
+    <nav id="navbar"
+        class="fixed top-0 w-full z-50 transition-all duration-300 bg-gray-900/80 backdrop-blur-md border-b border-gray-800">
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- MODIFICACIÓN [Fernando]: Contenedor principal del navbar - 07/12/2025 -->
+            <div class="flex justify-between items-center h-16">
+
+                <div class="flex-shrink-0">
+                    <!-- MODIFICACIÓN [Fernando]: Logo / nombre que regresa a la sección home - 07/12/2025 -->
+                    <a href="#home" class="text-xl font-bold text-white hover:text-primary-400 transition-colors">
+                        <i class="fas fa-code text-primary-500 mr-2"></i>
+                        FERNANDO CARLOS CARRASCO CONDORI
+                    </a>
+                </div>
+
+                <!-- MODIFICACIÓN [Fernando]: Menú visible en pantallas medianas hacia arriba - 07/12/2025 -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#home"
+                            class="nav-link text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Inicio</a>
+                        <a href="#about"
+                            class="nav-link text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Acerca de Mí</a>
+                        <a href="#portfolio"
+                            class="nav-link text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Portafolio</a>
+                        <a href="#services"
+                            class="nav-link text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Servicios</a>
+                        <a href="#contact"
+                            class="nav-link text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Contacto</a>
+                    </div>
+                </div>
+
+                <!-- MODIFICACIÓN [Fernando]: Botón hamburguesa para menú móvil - 07/12/2025 -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button"
+                        class="relative p-3 text-gray-400 hover:text-white focus:outline-none transition-colors duration-300">
+                        <div class="hamburger-lines w-6 h-5 flex flex-col justify-between">
+                            <span
+                                class="hamburger-line block w-full h-0.5 bg-current transition-all duration-300 ease-in-out transform origin-center"></span>
+                            <span
+                                class="hamburger-line block w-full h-0.5 bg-current transition-all duration-300 ease-in-out transform origin-center"></span>
+                            <span
+                                class="hamburger-line block w-full h-0.5 bg-current transition-all duration-300 ease-in-out transform origin-center"></span>
+                        </div>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- MODIFICACIÓN [Fernando]: Menú móvil oculto por defecto - 07/12/2025 -->
+        <div id="mobile-menu" class="md:hidden hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-800">
+                <!-- MODIFICACIÓN [Fernando]: Enlaces del menú móvil - 07/12/2025 -->
+                <a href="#home"
+                    class="mobile-nav-link block px-3 py-2 text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700 rounded-md">Inicio</a>
+                <a href="#about"
+                    class="mobile-nav-link block px-3 py-2 text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700 rounded-md">Acerca de Mí</a>
+                <a href="#portfolio"
+                    class="mobile-nav-link block px-3 py-2 text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700 rounded-md">Portafolio</a>
+                <a href="#services"
+                    class="mobile-nav-link block px-3 py-2 text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700 rounded-md">Servicios</a>
+                <a href="#contact"
+                    class="mobile-nav-link block px-3 py-2 text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700 rounded-md">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- MODIFICACIÓN [Fernando]: Sección principal "Home" con fondo animado - 07/12/2025 -->
+    <section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden">
+
+        <!-- MODIFICACIÓN [Fernando]: Capas de fondo con gradientes y animaciones - 07/12/2025 -->
+        <div class="absolute inset-0 bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900">
+            <div class="absolute inset-0 bg-black/50"></div>
+
+            <!-- MODIFICACIÓN [Fernando]: Círculo animado superior izquierdo - 07/12/2025 -->
+            <div
+                class="absolute top-1/4 left-1/4 w-72 h-72 bg-primary-600/20 rounded-full blur-3xl animate-pulse-slow">
+            </div>
+
+            <!-- MODIFICACIÓN [Fernando]: Círculo animado inferior derecho con delay - 07/12/2025 -->
+            <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-600/20 rounded-full blur-3xl animate-pulse-slow"
+                style="animation-delay: 2s"></div>
+        </div>
+
+        <!-- MODIFICACIÓN [Fernando]: Contenido principal centrado de la sección Home - 07/12/2025 -->
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+
+                <!-- MODIFICACIÓN [Fernando]: Columna izquierda (texto principal) - 07/12/2025 -->
+                <div class="text-center lg:text-left animate-fade-in">
+
+                    <div class="mb-6">
+
+                        <!-- MODIFICACIÓN [Fernando]: Badge "Disponible para Proyectos" - 07/12/2025 -->
+                        <span
+                            class="inline-block px-4 py-2 bg-primary-600/20 text-primary-300 rounded-full text-sm font-medium mb-4 animate-slide-up">
+                            <i class="fas fa-rocket mr-2"></i>
+                            Disponible para Proyectos
+                        </span>
+
+                        <!-- MODIFICACIÓN [Fernando]: Título principal con tu nombre estilizado - 07/12/2025 -->
+                        <h1 class="text-4xl sm:text-6xl lg:text-7xl font-bold leading-tight mb-6">
+                            FERNANDO CARLOS
+                            <span
+                                class="bg-gradient-to-r from-primary-400 to-purple-400 bg-clip-text text-transparent">CARRASCO CONDORI</span>
+                        </h1>
+
+                        <!-- MODIFICACIÓN [Fernando]: Subtítulos descriptivos - 07/12/2025 -->
+                        <p class="text-xl sm:text-2xl text-gray-300 mb-4">
+                            Estudiante de Ingeniería de Sistemas – 6to Semestrer
+                        </p>
+
+                        <p class="text-lg text-gray-400 max-w-2xl mx-auto lg:mx-0">
+                            Estudiante del 6to semestre con enfoque en diseño web, desarrollo moderno y creación de interfaces funcionales.
+                            Apasionado por el aprendizaje constante y la construcción de proyectos útiles.
+                        </p>
+                    </div>
+
+                    <!-- MODIFICACIÓN [Fernando]: Botones principales de llamada a la acción - 07/12/2025 -->
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
+                        <a href="#portfolio"
+                            class="px-8 py-3 bg-primary-600 hover:bg-primary-700 text-white rounded-lg font-medium transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:shadow-primary-500/25">
+                            <i class="fas fa-folder-open mr-2"></i>Ver Portafolio
+                        </a>
+
+                        <a href="#contact"
+                            class="px-8 py-3 border-2 border-primary-600 text-primary-400 hover:bg-primary-600 hover:text-white rounded-lg font-medium transition-all duration-300 transform hover:scale-105">
+                            <i class="fas fa-envelope mr-2"></i>Contáctame
+                        </a>
+                    </div>
+
+                    <!-- MODIFICACIÓN [Fernando]: Iconos de redes sociales con animación hover - 07/12/2025 -->
+                    <div class="flex space-x-4">
+                    <a href="http://www.youtube.com/@fernandocarloscarrascocondori" target="_blank"
+                        class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-youtube text-xl"></i>
+                    </a>
+                    <a href="https://www.facebook.com/share/1aDfHctovz/" target="_blank"
+                        class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-facebook text-xl"></i>
+                    </a>
+                    <a href="https://www.instagram.com/your_pinky69?igsh=enVwZnN5djV6M3Zy" target="_blank"
+                        class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>                    </div>
+                </div>
+
+                <!-- MODIFICACIÓN [Fernando]: Columna derecha (foto con efectos visuales) - 07/12/2025 -->
+                <div class="relative flex justify-center lg:justify-end animate-float">
+
+                    <div class="relative">
+
+                        <!-- MODIFICACIÓN [Fernando]: Contenedor circular de la imagen principal - 07/12/2025 -->
+                        <div
+                            class="w-72 h-72 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-primary-500/30 shadow-2xl shadow-primary-500/20">
+                            <img src="images/fer.png" alt="FERNANDO CARLOS CARRASCO CONDORI"
+                                class="w-full h-full object-cover" />
+                        </div>
+
+                        <!-- MODIFICACIÓN [Fernando]: Elementos brillantes decorativos alrededor de la foto - 07/12/2025 -->
+                        <div
+                            class="absolute -top-4 -right-4 w-24 h-24 bg-primary-600/20 rounded-full blur-xl animate-pulse">
+                        </div>
+
+                        <div class="absolute -bottom-4 -left-4 w-32 h-32 bg-purple-600/20 rounded-full blur-xl animate-pulse"
+                            style="animation-delay: 1s"></div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<!-- MODIFICACIÓN [FernandoCarlos]: Flecha animada para bajar a la sección "about" - 07/12/2025 -->
+<div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce-slow">
+    <a href="#about" class="text-gray-400 hover:text-white transition-colors">
+        <i class="fas fa-chevron-down text-2xl"></i>
+    </a>
+</div>
+
+</section>
+
+<!-- MODIFICACIÓN [FernandoCarlos]: Inicio de la sección About Me - 07/12/2025 -->
+<section id="about" class="py-20 bg-gray-800/50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- MODIFICACIÓN [FernandoCarlos]: Título principal y subtítulo de la sección About - 07/12/2025 -->
+        <div class="text-center mb-16">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-4">
+                Acerca de
+                <span class="bg-gradient-to-r from-primary-400 to-purple-400 bg-clip-text text-transparent">Mí</span>
+            </h2>
+            <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+                Apasionado por crear soluciones innovadoras que marquen la diferencia
+            </p>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+
+            <!-- MODIFICACIÓN [FernandoCarlos]: Párrafos descriptivos personales - 07/12/2025 -->
+            <div class="space-y-6">
+                <p class="text-lg text-gray-300 leading-relaxed">
+                    Soy **Fernando Carlos Carrasco Condori**, estudiante de Ingeniería de Sistemas en la Universidad Domingo Savio.
+                    Actualmente curso el 6to semestre y me encuentro desarrollando
+                    mis habilidades en **Diseño Web II** y tecnologías modernas relacionadas al frontend y backend.
+                </p>
+
+                <p class="text-lg text-gray-300 leading-relaxed">
+                    Me interesa el desarrollo web, la programación, la creación de interfaces
+                    funcionales y el aprendizaje continuo para mejorar mis proyectos. Mi objetivo es avanzar como **desarrollador full-stack** e integrar buenas prácticas,
+                    diseño limpio y soluciones eficientes en cada trabajo que realizo.
+                </p>
+
+                <!-- MODIFICACIÓN [FernandoCarlos]: Lista de habilidades principales - 07/12/2025 -->
+                <div class="grid grid-cols-2 gap-4 mt-8">
+                    <div class="space-y-3">
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-building text-primary-500"></i>
+                            <span>Soluciones empresariales</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-bullhorn text-primary-500"></i>
+                            <span>Marketing Digital</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-paint-brush text-primary-500"></i>
+                            <span>Diseño gráfico</span>
+                        </div>
+                    </div>
+
+                    <div class="space-y-3">
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-brain text-primary-500"></i>
+                            <span>Integración de IA</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-cloud text-primary-500"></i>
+                            <span>Soluciones en la nube</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-mobile-alt text-primary-500"></i>
+                            <span>Aplicaciones móviles</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MODIFICACIÓN [FernandoCarlos]: Tarjetas de estadísticas (proyectos, experiencia, etc.) - 07/12/2025 -->
+            <div class="grid grid-cols-2 gap-6">
+                <div class="text-center p-6 bg-gray-800/80 rounded-xl backdrop-blur-sm border border-gray-700 hover:border-primary-500/50 transition-all duration-300 transform hover:scale-105">
+                    <div class="text-3xl font-bold text-primary-400 mb-2" data-count="1247">0</div>
+                    <div class="text-gray-400">Mega proyectos</div>
+                </div>
+
+                <div class="text-center p-6 bg-gray-800/80 rounded-xl backdrop-blur-sm border border-gray-700 hover:border-primary-500/50 transition-all duration-300 transform hover:scale-105">
+                    <div class="text-3xl font-bold text-primary-400 mb-2" data-count="11">0</div>
+                    <div class="text-gray-400">Años de experiencia</div>
+                </div>
+
+                <div class="text-center p-6 bg-gray-800/80 rounded-xl backdrop-blur-sm border border-gray-700 hover:border-primary-500/50 transition-all duration-300 transform hover:scale-105">
+                    <div class="text-3xl font-bold text-primary-400 mb-2" data-count="2743">0</div>
+                    <div class="text-gray-400">Clientes felices</div>
+                </div>
+
+                <div class="text-center p-6 bg-gray-800/80 rounded-xl backdrop-blur-sm border border-gray-700 hover:border-primary-500/50 transition-all duration-300 transform hover:scale-105">
+                    <div class="text-3xl font-bold text-primary-400 mb-2" data-count="204">0</div>
+                    <div class="text-gray-400">Estrellas de GitHub</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- MODIFICACIÓN [FernandoCarlos]: Inicio de la sección Portafolio con filtros y proyectos - 07/12/2025 -->
+<section id="portfolio" class="py-20 bg-gray-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-4">
+                Mi
+                <span class="bg-gradient-to-r from-primary-400 to-purple-400 bg-clip-text text-transparent">Portafolio</span>
+            </h2>
+            <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+                una muestra de mis proyectos e innovaciones
+            </p>
+        </div>
+        <!-- MODIFICACIÓN [FernandoCarlos]: Botones de filtro para los proyectos - 07/12/2025 -->
+        <div class="flex flex-wrap justify-center mb-12 space-x-2 space-y-2">
+            <button class="portfolio-filter active px-6 py-2 rounded-full bg-primary-600 text-white font-medium" data-filter="all">
+                Todo
+            </button>
+            <button class="portfolio-filter px-6 py-2 rounded-full bg-gray-800 text-gray-300 hover:bg-gray-700 font-medium transition-colors" data-filter="mobile">
+                Móvil
+            </button>
+            <button class="portfolio-filter px-6 py-2 rounded-full bg-gray-800 text-gray-300 hover:bg-gray-700 font-medium transition-colors" data-filter="web">
+                Web
+            </button>
+            <button class="portfolio-filter px-6 py-2 rounded-full bg-gray-800 text-gray-300 hover:bg-gray-700 font-medium transition-colors" data-filter="ai">
+                IA
+            </button>
+        </div>
+        <!-- MODIFICACIÓN [FernandoCarlos]: Grid de proyectos del portafolio - 07/12/2025 -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- proyecto individual -->
+            <div class="portfolio-item group relative bg-gray-800 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300" data-category="mobile web">
+                <div class="relative overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1481437156560-3205f6a55735?w=400&h=300&fit=crop" alt="OpenListings" class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div class="absolute bottom-4 left-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div class="flex space-x-3">
+                            <a href="https://play.google.com/store/apps/details?id=dev.usama.openlistings" target="_blank" class="flex items-center justify-center w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full text-white hover:bg-white/30 transition-colors">
+                                <i class="fab fa-google-play"></i>
+                            </a>
+                            <a href="https://openlistings.org" target="_blank" class="flex items-center justify-center w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full text-white hover:bg-white/30 transition-colors">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center space-x-2 mb-2">
+                        <span class="px-2 py-1 bg-primary-600/20 text-primary-300 rounded text-xs font-medium">Móvil</span>
+                        <span class="px-2 py-1 bg-blue-600/20 text-blue-300 rounded text-xs font-medium">Negocios</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-white">OpenListings » Compra y Venta</h3>
+                    <p class="text-gray-400 mb-4">
+                        Una plataforma de mercado integral impulsada por la comunidad para listar, descubrir y
+                        conectar con productos, servicios y oportunidades, completamente gratis y sin comisiones.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-gray-700 text-gray-300 rounded-full text-sm">Flutter</span>
+                        <span class="px-3 py-1 bg-gray-700 text-gray-300 rounded-full text-sm">Dart</span>
+                        <span class="px-3 py-1 bg-gray-700 text-gray-300 rounded-full text-sm">Firebase</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- MODIFICACIÓN [FernandoCarlos]: Botones externos para ver más proyectos - 07/12/2025 -->
+        <div class="text-center mt-12">
+            <a href="https://play.google.com/store/apps/dev?id=8989701639213518481" target="_blank" class="inline-flex items-center px-6 py-3 border-2 border-primary-600 text-primary-400 hover:bg-primary-600 hover:text-white rounded-lg font-medium transition-all duration-300 mr-4">
+                <i class="fab fa-google-play mr-2"></i>
+                Ver más en Play Store
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- MODIFICACIÓN [FernandoCarlos]: Sección de Servicios - 07/12/2025 -->
+<section id="services" class="py-20 bg-gray-900">
+    <!-- Contenedor principal centrado -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Título y descripción de la sección -->
+        <div class="text-center mb-16">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-4">
+                Mis
+                <span class="bg-gradient-to-r from-primary-400 to-purple-400 bg-clip-text text-transparent">Servicios</span>
+            </h2>
+            <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+                Transformando ideas en soluciones digitales eficientes y modernas.
+            </p>
+        </div>
+
+        <!-- Grid de servicios -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- MODIFICACIÓN [FernandoCarlos]: Servicio 1 - Desarrollo de Aplicaciones Móviles -->
+            <div class="p-8 bg-gray-800/80 rounded-xl border border-gray-700 hover:border-primary-500/50 transition-all duration-300 transform hover:scale-[1.02]">
+                <!-- Icono del servicio -->
+                <div class="w-12 h-12 bg-primary-600/20 rounded-lg flex items-center justify-center mb-6">
+                    <i class="fas fa-mobile-alt text-2xl text-primary-400"></i>
+                </div>
+                <!-- Título y descripción del servicio -->
+                <h3 class="text-xl font-bold text-white mb-3">Desarrollo de Aplicaciones Móviles</h3>
+                <p class="text-gray-400">
+                    Creación de aplicaciones nativas de alto rendimiento y multiplataforma (Android, iOS) utilizando
+                    el framework <strong>Flutter</strong> de Google.
+                </p>
+                <!-- Link para más información -->
+                <a href="#contact" class="mt-4 inline-flex items-center text-primary-400 hover:text-primary-300 font-medium transition-colors">
+                    Saber más <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                </a>
+            </div>
+
+            <!-- MODIFICACIÓN [FernandoCarlos]: Servicio 2 - Desarrollo Web (Front & Back-end) -->
+            <div class="p-8 bg-gray-800/80 rounded-xl border border-gray-700 hover:border-primary-500/50 transition-all duration-300 transform hover:scale-[1.02]">
+                <div class="w-12 h-12 bg-primary-600/20 rounded-lg flex items-center justify-center mb-6">
+                    <i class="fas fa-globe text-2xl text-primary-400"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-3">Desarrollo Web (Front & Back-end)</h3>
+                <p class="text-gray-400">
+                    Construcción de sitios y aplicaciones web robustas. Me especializo en <strong>diseño de interfaz (Front-end)</strong>
+                    y en la lógica del servidor (Back-end) para soluciones completas.
+                </p>
+                <a href="#contact" class="mt-4 inline-flex items-center text-primary-400 hover:text-primary-300 font-medium transition-colors">
+                    Saber más <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                </a>
+            </div>
+
+            <!-- MODIFICACIÓN [FernandoCarlos]: Servicio 3 - Integración de IA / Machine Learning -->
+            <div class="p-8 bg-gray-800/80 rounded-xl border border-gray-700 hover:border-primary-500/50 transition-all duration-300 transform hover:scale-[1.02]">
+                <div class="w-12 h-12 bg-primary-600/20 rounded-lg flex items-center justify-center mb-6">
+                    <i class="fas fa-brain text-2xl text-primary-400"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-3">Integración de IA / Machine Learning</h3>
+                <p class="text-gray-400">
+                    Integración de modelos de Inteligencia Artificial para añadir funcionalidades de clasificación,
+                    predicción o procesamiento de lenguaje a tus proyectos.
+                </p>
+                <a href="#contact" class="mt-4 inline-flex items-center text-primary-400 hover:text-primary-300 font-medium transition-colors">
+                    Saber más <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- MODIFICACIÓN [FernandoCarlos]: Sección de Contacto - 07/12/2025 -->
+<section id="contact" class="py-20 bg-gray-800/50">
+    <!-- Contenedor principal centrado -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Título y descripción de la sección -->
+        <div class="text-center mb-16">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-4">
+                Trabajemos
+                <span class="bg-gradient-to-r from-primary-400 to-purple-400 bg-clip-text text-transparent">Juntos</span>
+            </h2>
+            <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+                ¿Tienes un proyecto en mente? Hablemos de cómo puedo ayudarte a dar vida a tus ideas.
+            </p>
+        </div>
+
+        <!-- Grid de contacto: formulario + info -->
+        <div class="grid lg:grid-cols-2 gap-12">
+            <!-- MODIFICACIÓN [FernandoCarlos]: Formulario de Contacto -->
+            <div class="bg-gray-800/80 backdrop-blur-sm rounded-xl p-8 border border-gray-700">
+                <form id="contact-form" class="space-y-6">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-300 mb-2">Nombre</label>
+                            <input type="text" id="name" name="name" required
+                                class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors"
+                                placeholder="Tu Nombre" />
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-300 mb-2">Email</label>
+                            <input type="email" id="email" name="email" required
+                                class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors"
+                                placeholder="tu@email.com" />
+                        </div>
+                    </div>
+                    <div>
+                        <label for="subject" class="block text-sm font-medium text-gray-300 mb-2">Asunto</label>
+                        <input type="text" id="subject" name="subject" required
+                            class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors"
+                            placeholder="Discusión de Proyecto" />
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-300 mb-2">Mensaje</label>
+                        <textarea id="message" name="message" rows="6" required
+                            class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors resize-none"
+                            placeholder="Cuéntame sobre tu proyecto..."></textarea>
+                    </div>
+                    <button type="submit"
+                        class="w-full px-8 py-3 bg-primary-600 hover:bg-primary-700 text-white rounded-lg font-medium transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:ring-offset-gray-800">
+                        <i class="fas fa-paper-plane mr-2"></i>
+                        Enviar Mensaje
+                    </button>
+                </form>
+            </div>
+
+            <!-- MODIFICACIÓN [FernandoCarlos]: Información de contacto y redes sociales -->
+            <div class="space-y-8">
+                <!-- Ubicación -->
+                <div class="flex items-start space-x-4">
+                    <div class="flex-shrink-0 w-12 h-12 bg-primary-600/20 rounded-lg flex items-center justify-center">
+                        <i class="fas fa-map-marker-alt text-primary-400"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold text-white mb-2">Ubicación</h3>
+                        <p class="text-gray-400">Bolivia 🇧🇴<br />Disponible para Trabajo Remoto Global</p>
+                    </div>
+                </div>
+
+                <!-- Correo electrónico -->
+                <div class="flex items-start space-x-4">
+                    <div class="flex-shrink-0 w-12 h-12 bg-primary-600/20 rounded-lg flex items-center justify-center">
+                        <i class="fas fa-envelope text-primary-400"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold text-white mb-2">Correo Electrónico</h3>
+                        <a href="mailto:fer1207carrasco@gmail.com"
+                            class="text-gray-400 hover:text-primary-400 transition-colors">fer1207carrasco@gmail.com</a>
+                    </div>
+                </div>
+
+                <!-- Teléfono -->
+                <div class="flex items-start space-x-4">
+                    <div class="flex-shrink-0 w-12 h-12 bg-primary-600/20 rounded-lg flex items-center justify-center">
+                        <i class="fas fa-phone text-primary-400"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold text-white mb-2">Teléfono</h3>
+                        <a href="tel:+923100007773"
+                            class="text-gray-400 hover:text-primary-400 transition-colors">7691207</a>
+                    </div>
+                </div>
+
+                <!-- Tiempo de respuesta -->
+                <div class="flex items-start space-x-4">
+                    <div class="flex-shrink-0 w-12 h-12 bg-primary-600/20 rounded-lg flex items-center justify-center">
+                        <i class="fas fa-clock text-primary-400"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold text-white mb-2">Tiempo de Respuesta</h3>
+                        <p class="text-gray-400">Usualmente en 24 horas</p>
+                    </div>
+                </div>
+
+                <!-- Redes sociales -->
+                <div class="pt-6">
+                    <h3 class="text-lg font-semibold text-white mb-4">Conecta Conmigo</h3>
+                    <div class="flex space-x-4">
+                    <a href="http://www.youtube.com/@fernandocarloscarrascocondori" target="_blank"
+                        class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-youtube text-xl"></i>
+                    </a>
+                    <a href="https://www.facebook.com/share/1aDfHctovz/" target="_blank"
+                        class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-facebook text-xl"></i>
+                    </a>
+                    <a href="https://www.instagram.com/your_pinky69?igsh=enVwZnN5djV6M3Zy" target="_blank"
+                        class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>                  
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- MODIFICACIÓN [FernandoCarlos]: Footer del sitio web - 07/12/2025 -->
+<footer class="bg-gray-900 border-t border-gray-800 py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Logo y nombre del desarrollador -->
+            <div class="lg:col-span-2">
+                <div class="mb-6">
+                    <h3 class="text-xl font-bold text-white mb-4">
+                        <i class="fas fa-code text-primary-500 mr-2"></i>
+                        FERNANDO
+                    </h3>
+                </div>
+                <!-- Redes sociales -->
+                <div class="flex space-x-4">
+                    <a href="http://www.youtube.com/@fernandocarloscarrascocondori" target="_blank"
+                        class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-youtube text-xl"></i>
+                    </a>
+                    <a href="https://www.facebook.com/share/1aDfHctovz/" target="_blank"
+                        class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-facebook text-xl"></i>
+                    </a>
+                    <a href="https://www.instagram.com/your_pinky69?igsh=enVwZnN5djV6M3Zy" target="_blank"
+                        class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>                  
+                </div>
+            </div>
+        </div>
+
+        <!-- Créditos y derechos de autor -->
+        <div class="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+            <p class="text-gray-400 text-sm">&copy; 2025 basado en el proyecto</p>
+            <p class="text-gray-400 text-sm mt-4 md:mt-0">
+                Hecho con <i class="fas fa-heart text-purple-500"> </i> en Pakistán
+            </p>
+        </div>
+    </div>
+</footer>
+<!-- Enlace al proyecto original -->
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-6">
+    <p class="text-gray-400 text-sm">
+        Basado en el proyecto de 
+        <a href="https://github.com/UsamaSarwar/UsamaSarwar.git" target="_blank" 
+           class="text-primary-400 hover:text-primary-300 transition-colors">
+           UsamaSarwar
+        </a>
+    </p>
+</div>
+
+
+<!-- Script principal del sitio -->
+<script src="js/script.js"></script>
+</body>
+</html>
+<!-- FIN MODIFICACIÓN [FernandoCarlos]: Footer y cierre de documento -->
